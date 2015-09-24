@@ -4,10 +4,10 @@ makeCacheMatrix <- function(x = matrix()) {
                 x <<- y
                 i <<- NULL
         }
-        # "x <<- y" substitutes the vector x with y (the input) in the main function (makeVector)
+        # "x <<- y" substitutes the vector x with y (the input) in the main function (makeCacheMatrix)
         # stores new value as x
         # <<- makes change throughout the entire function, not just this function
-        # m <<- NULL returns the mean to NULL, so that a new mean can be calculated
+        # i <<- NULL returns the inverse to NULL, so that a new inverse can be calculated
         get <- function() x
         # returns function x
         setinverse <- function(inverse) i <<- inverse
@@ -34,3 +34,4 @@ cacheSolve <- function(x, ...) {
         i
         # stores the inverse
 }
+
